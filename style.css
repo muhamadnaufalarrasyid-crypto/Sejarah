@@ -1,0 +1,173 @@
+/* --- Global Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #eeeeee; /* Mengubah teks utama jadi terang agar terbaca di bg gelap */
+    background-color: #121212; /* Warna dasar hitam obsidian yang tenang */
+    scroll-behavior: smooth;
+}
+
+/* --- Navbar & Logo --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.logo-box {
+    background: #d4af37;
+    color: #111;
+    font-weight: 800;
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.logo-text {
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li { margin-left: 30px; }
+.nav-links a {
+    text-decoration: none;
+    color: #eee;
+    transition: 0.3s;
+}
+.nav-links a:hover { color: #d4af37; }
+
+/* --- Hero Section (Gradasi Deep Silence) --- */
+.hero {
+    height: 100vh;
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #2c3e50 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 50px;
+    border-radius: 15px;
+    color: white;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+}
+
+.hero h1 span { color: #d4af37; }
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: #d4af37;
+    color: #111;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #fff;
+    transform: translateY(-3px);
+}
+
+/* --- Main Content & Gradasi Section --- */
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.article-section {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 50px;
+    padding: 60px 40px;
+    border-radius: 25px;
+    /* Memberikan sedikit efek angkat agar kartu terlihat di atas background hitam */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5); 
+}
+
+.article-section {
+    /* Angka 100px ini bisa kamu sesuaikan. 
+       Ini memberikan jarak agar saat di-klik, konten tidak tertutup navbar 
+       dan posisinya lebih turun ke tengah layar. */
+    scroll-margin-top: 120px; 
+}
+
+/* Gradasi Makam Jerman (Nuansa Hutan Gelap) */
+#makam-jerman {
+    background: linear-gradient(135deg, #1a1d1a 0%, #0d0e0d 100%);
+    border: 1px solid rgba(46, 71, 50, 0.3); /* Border hijau gelap tipis */
+}
+
+/* Gradasi Raden Saleh (Nuansa Keraton/Emas Tua Gelap) */
+#raden-saleh {
+    background: linear-gradient(135deg, #1a1815 0%, #0f0e0d 100%);
+    border: 1px solid rgba(212, 175, 55, 0.2); /* Border emas tipis */
+}
+
+/* Memperbaiki warna teks judul agar kontras */
+.article-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.article-content p {
+    color: #cccccc; /* Abu-abu terang agar nyaman dibaca */
+}
+
+.separator {
+    border: 0;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1); /* Garis pemisah yang halus */
+    margin: 60px 0;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 40px;
+    background: #111;
+    color: #777;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .article-section, .article-section.reverse {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+    .hero h1 { font-size: 2.5rem; }
+}
